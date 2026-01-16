@@ -1,15 +1,71 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-primary-50: #f3ecfb;
+  --color-primary-100: #e7d9f7;
+  --color-primary-200: #d0b3eb;
+  --color-primary-300: #ba94d5;
+  --color-primary-400: #a37bc2;
+  --color-primary-500: #8c63af;
+  --color-primary-600: #754b9c;
+  --color-primary-700: #5e3389;
+  --color-primary-800: #471b76;
+  --color-primary-900: #300363;
+
+  --color-secondary-50: #f0f9ff;
+  --color-secondary-100: #e0f2fe;
+  --color-secondary-500: #0ea5e9;
+  --color-secondary-600: #0284c7;
+  --color-secondary-900: #0c4a6e;
+
+  --color-wine-950: #1a0508;
+  --color-wine-900: #2d0a12;
+  --color-wine-800: #3e0e18;
+  --color-wine-700: #5c1523;
+  --color-wine-600: #7e1d2e;
+
+  --color-cream-50: #faf7f2;
+  --color-cream-100: #f5e6d3;
+  --color-cream-200: #eaddca;
+  --color-cream-300: #d5bea3;
+
+  --color-gold-400: #c5a065;
+
+  --font-serif: 'Playfair Display', serif;
+  --font-display: 'Cinzel', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-sans: 'Lato', sans-serif;
+}
+
+body {
+  background-color: #2d0a12;
+  color: #f5e6d3;
+}
+.glass-panel {
+  background: rgba(62, 14, 24, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(245, 230, 211, 0.1);
+}
 
 body {
   @apply m-0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
