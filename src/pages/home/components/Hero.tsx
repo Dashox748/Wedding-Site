@@ -1,34 +1,26 @@
-import BranchIcon from '@/pages/home/components/BranchIcon.tsx';
 import Countdown from '@/pages/home/components/Countdown.tsx';
+import Branch from '@/assets/branch.png';
 
 export const Hero = () => {
   return (
     <section className="flex w-full lg:h-200 lg:flex-row">
-      <div className="bg-wine-800/30 border-wine-700/30 group relative hidden w-full items-center justify-center overflow-hidden p-12 lg:flex lg:w-5/12 lg:border-r">
-        <div className="border-wine-600/20 absolute aspect-square w-[80%] scale-90 rounded-full border opacity-0 transition-opacity duration-1000 ease-out group-hover:scale-100 group-hover:opacity-100" />
-
+      <div className="bg-primary-500 border-primary-700 group relative hidden w-full items-center justify-center overflow-hidden p-12 lg:flex lg:w-5/12 lg:border-r">
         <div className="relative z-10 flex transform flex-col items-center justify-center transition-transform duration-700 hover:scale-105">
-          <div className="relative flex h-80 w-64 items-center justify-center lg:h-125 lg:w-96">
-            <div className="text-wine-600/40 lg:text-wine-600/30 absolute inset-0 flex items-center justify-center">
-              <BranchIcon className="h-full w-full scale-125 rotate-12 transform object-contain" />
-            </div>
-
-            <h1
-              className="font-display text-cream-200/90 relative text-[12rem] leading-none font-thin mix-blend-overlay lg:text-[16rem]"
-              style={{ fontFamily: 'Cinzel, serif' }}
-            >
-              <span className="absolute top-0 left-4 -translate-x-1/2 translate-y-8 transform lg:left-0 lg:translate-y-0">
-                A
-              </span>
-              <span className="absolute right-4 bottom-0 translate-x-1/2 -translate-y-8 transform lg:right-0 lg:translate-y-0">
-                K
-              </span>
-            </h1>
+          <div
+            className="font-display text-primary-700 relative z-10 mx-auto min-h-85 min-w-93 text-[12rem] leading-none font-thin mix-blend-overlay lg:text-[16rem]"
+            style={{ fontFamily: 'Cinzel, serif' }}
+          >
+            <span className="absolute -top-20 left-0">A</span>
+            <span className="absolute right-0 -bottom-20">K</span>
           </div>
+        </div>
+
+        <div className="absolute inset-0 z-0 flex items-center justify-center">
+          <img className="h-full w-full scale-50 transform object-contain" src={Branch} />
         </div>
       </div>
 
-      <div className="from-wine-900 to-wine-950 lg:mt-20 flex w-full flex-col items-center justify-center space-y-10 bg-linear-to-b p-8 text-center lg:w-7/12 lg:space-y-16 lg:bg-none lg:p-16 pt-30">
+      <div className="from-wine-900 to-wine-950 flex w-full flex-col items-center justify-center space-y-10 bg-linear-to-b p-8 pt-30 text-center lg:mt-20 lg:w-7/12 lg:space-y-16 lg:bg-none lg:p-16">
         <div className="animate-fade-in-up space-y-4">
           <p className="font-display text-cream-300 text-xs tracking-[0.3em] uppercase lg:text-sm">
             Zapraszamy na nasz ślub

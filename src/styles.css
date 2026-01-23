@@ -6,9 +6,9 @@
   --color-primary-200: #d0b3eb;
   --color-primary-300: #ba94d5;
   --color-primary-400: #a37bc2;
-  --color-primary-500: #8c63af;
+  --color-primary-500: #fae6ef;
   --color-primary-600: #754b9c;
-  --color-primary-700: #5e3389;
+  --color-primary-700: #430e18;
   --color-primary-800: #471b76;
   --color-primary-900: #300363;
 
@@ -19,9 +19,9 @@
   --color-secondary-900: #0c4a6e;
 
   --color-wine-950: #1a0508;
-  --color-wine-900: #2d0a12;
-  --color-wine-800: #3e0e18;
-  --color-wine-700: #5c1523;
+  --color-wine-900: #420d17;
+  --color-wine-800: #8f233a;
+  --color-wine-700: #e47189;
   --color-wine-600: #7e1d2e;
 
   --color-cream-50: #faf7f2;
@@ -38,7 +38,7 @@
 }
 
 body {
-  background-color: #2d0a12;
+  background-color: #430e18;
   color: #f5e6d3;
 }
 .glass-panel {

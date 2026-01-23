@@ -10,7 +10,7 @@ export const Navbar = ({ showMenu, onToggle }: NavbarProps) => {
         <button
           className={`font-display rounded-md px-4 py-2 text-sm tracking-[0.2em] transition-all duration-300 ${
             !showMenu
-              ? 'text-cream-100 bg-wine-700 shadow-inner'
+              ? 'text-cream-100 bg-primary-700 shadow-inner'
               : 'text-wine-300 hover:text-cream-100 hover:bg-wine-800/50'
           } `}
           onClick={() => onToggle(false)}

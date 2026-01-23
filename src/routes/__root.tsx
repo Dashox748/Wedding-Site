@@ -41,9 +41,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <div
-          className={`text-cream-100 selection:bg-wine-700 selection:text-cream-50 relative min-h-screen overflow-x-hidden font-sans transition-opacity duration-700 ${fontsLoaded ? 'opacity-100' : 'opacity-0'}`}
+          className={`text-cream-100 selection:bg-primary-700 selection:text-cream-50 relative min-h-screen overflow-x-hidden font-sans transition-opacity duration-700 ${fontsLoaded ? 'opacity-100' : 'opacity-0'}`}
         >
-          <div className="from-wine-950 via-wine-900 to-wine-800 fixed inset-0 -z-10 bg-linear-to-br" />
 
           <Navbar onToggle={setShowFoodMenu} showMenu={showFoodMenu} />
 
