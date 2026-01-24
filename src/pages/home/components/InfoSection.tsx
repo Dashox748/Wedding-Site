@@ -37,8 +37,6 @@ const InfoSection: React.FC = () => {
           Nie jesz mięsa, masz alergię albo inne potrzeby żywieniowe?
           <br />
           <span className="text-cream-100 font-medium">Daj nam znać wcześniej!</span>
-          <br />
-          Chcemy zadbać o komfort każdego gościa.
         </InfoItem>
 
         <InfoItem delay="animate-fade-in-up [animation-delay:200ms]" title="Dzieci">
@@ -49,13 +47,13 @@ const InfoSection: React.FC = () => {
         </InfoItem>
 
         <InfoItem delay="animate-fade-in-up [animation-delay:400ms]" title="Podarki">
-          Uprzejmie informujemy, że nie potrzebujemy kwiatów. Zamiast tego, będziemy wdzięczni za butelkę dobrego wina
-          lub kupon lotto, który przyniesie nam szczęście w nowej drodze życia.
+          Uprzejmie informujemy, że nie potrzebujemy kwiatów ani alkoholu — po weselu z pewnością nie zabraknie nam ani
+          jednego ani drugiego.
         </InfoItem>
 
         <InfoItem delay="animate-fade-in-up [animation-delay:600ms]" title="Nocleg">
-          Noclegi są dostępne dla gości przyjezdnych w hotelu przy sali weselnej. Koszt noclegu pokrywają Państwo
-          Młodzi. Prosimy o potwierdzenie chęci skorzystania z noclegu do 1 maja 2026.
+          Noclegi są dostępne, a ich koszt pokrywają goście. W celu rezerwacji najlepiej skontaktować się z Angelą,
+          ponieważ gości weselnych obowiązuje inna cena.
         </InfoItem>
       </div>
     </section>

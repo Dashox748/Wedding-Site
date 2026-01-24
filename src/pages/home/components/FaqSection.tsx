@@ -15,7 +15,6 @@ const FAQSection: React.FC = () => {
   return (
     <section className="mx-auto w-full max-w-350 overflow-hidden px-4 py-20 lg:px-12">
       <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-20">
-        {/* Left Column: Title & Visual */}
         <div className="sticky top-24 flex w-full flex-col items-center space-y-8 text-center lg:w-5/12 lg:items-center">
           <div className="space-y-2">
             <h2 className="font-display text-cream-100 text-5xl leading-tight lg:text-7xl">
@@ -33,7 +32,6 @@ const FAQSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Right Column: Q&A Boxes */}
         <div className="flex w-full flex-col gap-6 lg:w-7/12 lg:gap-8">
           <FAQBox title="Czy na miejscu jest parking?">
             Tak, na terenie kościoła jak i Żabiego Dworu znajdują się bezpłatne parkingi.
@@ -48,6 +46,11 @@ const FAQSection: React.FC = () => {
 
           <FAQBox title="Poprawiny">
             Poprawin nie planujemy, więc całą energię zostawcie na wesele i wspólną zabawę do samego końca!
+          </FAQBox>
+
+          <FAQBox title="Przejazd">
+            Zapewniamy przejazd z kościoła do Żabiego Dworu po ceremonii, jak i powrót do Nowej soli po zakończeniu
+            wesela.
           </FAQBox>
         </div>
       </div>
