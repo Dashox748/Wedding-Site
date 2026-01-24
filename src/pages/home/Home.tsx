@@ -4,6 +4,7 @@ import InfoSection from '@/pages/home/components/InfoSection.tsx';
 import RSVPSection from '@/pages/home/components/RSVPSection.tsx';
 import FaqSection from '@/pages/home/components/FaqSection.tsx';
 import { Hero } from '@/pages/home/components/Hero.tsx';
+import { Plan } from '@/pages/home/components/Plan.tsx';
 
 export const Home = () => {
   return (
@@ -19,6 +20,9 @@ export const Home = () => {
       </ScrollReveal>
       <ScrollReveal>
         <LocationSection />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Plan />
       </ScrollReveal>
       <ScrollReveal>
         <RSVPSection />
