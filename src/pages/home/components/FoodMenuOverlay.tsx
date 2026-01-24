@@ -95,8 +95,7 @@ const FoodMenuOverlay: React.FC<MenuProps> = ({ isVisible }) => {
   );
 
   return (
-    <div className="from-wine-950 via-wine-900 to-wine-800 animate-fade-in fixed inset-0 z-40 flex flex-col items-center overflow-y-auto bg-linear-to-br">
-      <div className="from-wine-800/20 via-wine-950 to-wine-950 pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))]" />
+    <div className="bg-primary-700 animate-fade-in fixed inset-0 z-40 flex flex-col items-center overflow-y-auto bg-linear-to-br">
       <RoseBouquet className="text-wine-900/30 pointer-events-none fixed top-0 left-0 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2" />
       <RoseBouquet className="text-wine-900/30 pointer-events-none fixed right-0 bottom-0 h-[500px] w-[500px] translate-x-1/2 translate-y-1/2 rotate-180" />
 

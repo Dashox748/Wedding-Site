@@ -1,6 +1,6 @@
 import React from 'react';
 
-import RoseBouquet from './RoseBouquet';
+import kwiatFaq from '@/assets/kwiatFaq.png';
 
 const FAQBox: React.FC<{ children: React.ReactNode; title: string }> = ({ children, title }) => (
   <div className="border-cream-200/20 bg-wine-800/20 hover:bg-wine-800/40 hover:border-cream-200/40 group w-full border p-8 backdrop-blur-sm transition-all duration-500">
@@ -28,7 +28,8 @@ const FAQSection: React.FC = () => {
 
           <div className="animate-pulse-slow relative aspect-square w-full max-w-100 opacity-80">
             <div className="bg-wine-600/10 absolute inset-0 rounded-full blur-3xl" />
-            <RoseBouquet className="text-wine-400 h-full w-full" />
+            <img src={kwiatFaq} />
+            {/*<RoseBouquet className="text-wine-400 h-full w-full" />*/}
           </div>
         </div>
 
