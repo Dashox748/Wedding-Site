@@ -1,19 +1,20 @@
 import React from 'react';
 
+import rozowyKwiat from '@/assets/rozowy_kwiat.png';
+import roza from '@/assets/roza.png';
+
 import LargeFernIcon from './LargeFernIcon';
-import RedRoseIcon from './RedRoseIcon';
-import PeonyIcon from './PeonyIcon';
 
 interface ContactBoxProps {
-  Icon: React.FC<{ className?: string }>;
   phone: string;
   name: string;
+  img: string;
 }
 
-const ContactBox: React.FC<ContactBoxProps> = ({ phone, name, Icon }) => (
+const ContactBox: React.FC<ContactBoxProps> = ({ phone, name, img }) => (
   <div className="border-cream-200/40 bg-wine-900/40 group hover:bg-wine-800/40 hover:border-cream-200/60 relative flex flex-col items-center justify-center space-y-6 border p-10 backdrop-blur-sm transition-all duration-500 lg:p-14">
     <div className="h-16 w-16 transition-transform duration-500 group-hover:scale-110 lg:h-20 lg:w-20">
-      <Icon className="h-full w-full drop-shadow-lg" />
+      <img src={img} />
     </div>
     <div className="space-y-2 text-center">
       <h3 className="font-display text-cream-100 text-3xl tracking-wider lg:text-4xl">{name}</h3>
@@ -53,8 +54,8 @@ const RSVPSection: React.FC = () => {
 
         {/* Contact Grid */}
         <div className="grid w-full grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:gap-24 lg:px-0">
-          <ContactBox phone="789 321 217" Icon={PeonyIcon} name="ANGELA" />
-          <ContactBox phone="795 061 273" Icon={RedRoseIcon} name="KACPER" />
+          <ContactBox phone="789 321 217" img={rozowyKwiat} name="ANGELA" />
+          <ContactBox phone="795 061 273" name="KACPER" img={roza} />
         </div>
       </div>
     </section>
