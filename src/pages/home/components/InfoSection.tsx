@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SmallLeafIcon from './SmallLeafIcon';
+import Branch from '@/assets/branch.png';
 
 interface InfoItemProps {
   children: React.ReactNode;
@@ -13,7 +13,7 @@ const InfoItem: React.FC<InfoItemProps> = ({ children, title, delay }) => (
     className={`glass-panel hover:bg-wine-800/50 group flex flex-col items-center space-y-4 rounded-lg p-8 text-center transition-colors duration-500 ${delay}`}
   >
     <div className="text-cream-300 transform transition-transform duration-300 group-hover:-translate-y-1">
-      <SmallLeafIcon />
+      <img className="size-12.5" src={Branch} />
     </div>
     <h3 className="font-display border-wine-600/30 text-cream-100 border-b pb-2 text-2xl tracking-widest uppercase">
       {title}
