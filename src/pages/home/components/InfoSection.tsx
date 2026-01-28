@@ -10,15 +10,15 @@ interface InfoItemProps {
 
 const InfoItem: React.FC<InfoItemProps> = ({ children, title, delay }) => (
   <div
-    className={`glass-panel hover:bg-wine-800/50 group flex flex-col items-center space-y-4 rounded-lg p-8 text-center transition-colors duration-500 ${delay}`}
+    className={`glass-panel bg-dela-kolor-tla-kafelek-wazne-informacje text-dela-kolor-tekstu-kafelek-wazne-informacje hover:bg-wine-800/50 group flex flex-col items-center space-y-4 rounded-lg p-8 text-center transition-colors duration-500 ${delay}`}
   >
-    <div className="text-cream-300 transform transition-transform duration-300 group-hover:-translate-y-1">
+    <div className=" transform transition-transform duration-300 group-hover:-translate-y-1">
       <img className="size-12.5" src={Branch} />
     </div>
-    <h3 className="font-display border-wine-600/30 text-cream-100 border-b pb-2 text-2xl tracking-widest uppercase">
+    <h3 className="font-display border-wine-600/30  border-b pb-2 text-2xl tracking-widest uppercase">
       {title}
     </h3>
-    <p className="text-cream-200/80 max-w-sm font-sans text-sm leading-relaxed font-light md:text-base">{children}</p>
+    <p className=" max-w-sm font-sans text-sm leading-relaxed font-light md:text-base">{children}</p>
   </div>
 );
 

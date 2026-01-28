@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import { CutleryIcon, DinnerIcon, WineIcon } from './FoodIcons';
-import RoseBouquet from './RoseBouquet';
+import { CutleryIcon } from './FoodIcons';
 
 interface WeddingMenu {
   coldAppetizers: MenuItemData[];
@@ -17,10 +16,6 @@ interface MenuItemData {
   description: string;
   name: string;
   id: string;
-}
-
-interface MenuProps {
-  isVisible: boolean;
 }
 
 const INITIAL_MENU: WeddingMenu = {
@@ -71,10 +66,8 @@ const INITIAL_MENU: WeddingMenu = {
   },
 };
 
-const FoodMenuOverlay: React.FC<MenuProps> = ({ isVisible }) => {
+const FoodMenuSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'dinner' | 'supper' | 'cold'>('dinner');
-
-  if (!isVisible) return null;
 
   const TabButton: React.FC<{
     Icon: React.FC<{ className?: string }>;
@@ -82,10 +75,10 @@ const FoodMenuOverlay: React.FC<MenuProps> = ({ isVisible }) => {
     label: string;
   }> = ({ label, Icon, id }) => (
     <button
-      className={`font-display flex items-center space-x-2 rounded-md px-6 py-3 text-sm tracking-widest uppercase transition-all duration-500 lg:text-base ${
+      className={`font-display flex items-center space-x-2 rounded-md border border-transparent px-6 py-3 text-sm tracking-widest uppercase transition-all duration-500 lg:text-base ${
         activeTab === id
-          ? 'bg-wine-600 text-cream-100 scale-105 shadow-lg'
-          : 'text-wine-400 hover:text-cream-200 hover:bg-wine-800/30'
+          ? 'bg-wine-600 text-cream-100 border-wine-500 scale-105 shadow-lg'
+          : 'text-wine-300 hover:text-cream-200 hover:bg-wine-800/30 hover:border-wine-700/50'
       } `}
       onClick={() => setActiveTab(id)}
     >
@@ -95,12 +88,12 @@ const FoodMenuOverlay: React.FC<MenuProps> = ({ isVisible }) => {
   );
 
   return (
-    <div className="bg-primary-700 animate-fade-in fixed inset-0 z-40 flex flex-col items-center overflow-y-auto bg-linear-to-br">
-      <RoseBouquet className="text-wine-900/30 pointer-events-none fixed top-0 left-0 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2" />
-      <RoseBouquet className="text-wine-900/30 pointer-events-none fixed right-0 bottom-0 h-[500px] w-[500px] translate-x-1/2 translate-y-1/2 rotate-180" />
+    <section className="relative mx-auto w-full max-w-350 overflow-hidden px-4 py-24 lg:px-12" id="menu">
+      <div className="bg-wine-400/5 pointer-events-none absolute top-0 right-0 h-100 w-100 rounded-full blur-3xl" />
+      <div className="bg-wine-400/5 pointer-events-none absolute bottom-0 left-0 h-100 w-100 rounded-full blur-3xl" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center px-6 py-24 lg:py-32">
-        <div className="border-wine-800/50 mb-16 flex w-full flex-col items-center justify-between space-y-8 border-b pb-8 lg:mb-24 lg:flex-row lg:space-y-0">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center">
+        <div className="border-wine-600/30 mb-16 flex w-full flex-col items-center justify-between space-y-8 border-b pb-8 lg:mb-20 lg:flex-row lg:space-y-0">
           <div className="text-center lg:text-left">
             <h2 className="font-display text-cream-100 mb-2 text-4xl tracking-wide lg:text-6xl">UCZTA WESELNA</h2>
             <p className="font-display text-wine-400 text-sm tracking-[0.3em] uppercase">Angela & Kacper</p>
@@ -113,25 +106,22 @@ const FoodMenuOverlay: React.FC<MenuProps> = ({ isVisible }) => {
           </div>
         </div>
 
-        <div className="animate-fade-in-up min-h-[400px] w-full max-w-5xl">
+        <div className="animate-fade-in-up min-h-100 w-full max-w-5xl">
           {activeTab === 'dinner' && (
-            <div className="flex flex-col items-center space-y-12 text-center">
+            <div className="animate-fade-in flex flex-col items-center space-y-12 text-center">
               <div className="space-y-2">
                 <div className="text-wine-400 mb-2 opacity-80">
-                  <DinnerIcon className="mx-auto h-8 w-8" />
+                  <CutleryIcon className="mx-auto h-10 w-10" />
                 </div>
                 <h3 className="font-display text-cream-100 text-3xl tracking-wider">DANIE GŁÓWNE</h3>
-                <p className="font-script text-wine-300 text-3xl">Tradycyjne i Nowoczesne</p>
               </div>
 
               <div className="w-full space-y-12">
-                {/* Soup */}
                 <div className="space-y-6">
                   <h4 className="font-display text-wine-300 text-xl tracking-widest uppercase">Zupa</h4>
                   <MenuItem description={INITIAL_MENU.starterSoup.description} name={INITIAL_MENU.starterSoup.name} />
                 </div>
 
-                {/* Main Courses */}
                 <div className="space-y-6">
                   <h4 className="font-display text-wine-300 text-xl tracking-widest uppercase">Dania Główne</h4>
                   <div className="grid w-full grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
@@ -141,7 +131,6 @@ const FoodMenuOverlay: React.FC<MenuProps> = ({ isVisible }) => {
                   </div>
                 </div>
 
-                {/* Sides */}
                 <div className="space-y-6">
                   <h4 className="font-display text-wine-300 text-xl tracking-widest uppercase">Dodatki</h4>
                   <div className="grid w-full grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
@@ -155,13 +144,12 @@ const FoodMenuOverlay: React.FC<MenuProps> = ({ isVisible }) => {
           )}
 
           {activeTab === 'cold' && (
-            <div className="flex flex-col items-center space-y-12 text-center">
+            <div className="animate-fade-in flex flex-col items-center space-y-12 text-center">
               <div className="space-y-2">
                 <div className="text-wine-400 mb-2 opacity-80">
-                  <WineIcon className="mx-auto h-8 w-8" />
+                  <CutleryIcon className="mx-auto h-10 w-10" />
                 </div>
                 <h3 className="font-display text-cream-100 text-3xl tracking-wider">BUFET ZIMNY</h3>
-                <p className="font-script text-wine-300 text-3xl">Selekcja Przekąsek</p>
               </div>
 
               <div className="grid w-full grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
@@ -182,13 +170,12 @@ const FoodMenuOverlay: React.FC<MenuProps> = ({ isVisible }) => {
           )}
 
           {activeTab === 'supper' && (
-            <div className="flex flex-col items-center space-y-12 text-center">
+            <div className="animate-fade-in flex flex-col items-center space-y-12 text-center">
               <div className="space-y-2">
                 <div className="text-wine-400 mb-2 opacity-80">
-                  <CutleryIcon className="mx-auto h-8 w-8" />
+                  <CutleryIcon className="mx-auto h-10 w-10" />
                 </div>
                 <h3 className="font-display text-cream-100 text-3xl tracking-wider">KOLACJA NA CIEPŁO</h3>
-                <p className="font-script text-wine-300 text-3xl">Dania Gorące</p>
               </div>
 
               <div className="grid w-full max-w-2xl grid-cols-1 gap-y-12">
@@ -211,7 +198,7 @@ const FoodMenuOverlay: React.FC<MenuProps> = ({ isVisible }) => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -229,4 +216,4 @@ const MenuItem: React.FC<{ description?: string; className?: string; name: strin
   </div>
 );
 
-export default FoodMenuOverlay;
+export default FoodMenuSection;

@@ -1,6 +1,16 @@
 @import 'tailwindcss';
 
 @theme {
+  --color-dela-kolor-tla: #430e18;
+  --color-dela-kolor-baner: #fae6ef;
+  --color-dela-kolor-tla-kafelek-wazne-informacje: #8f233a4d;
+  --color-dela-kolor-tekstu-kafelek-wazne-informacje: #f5e6d3;
+  --color-dela-kolor-tla-kafelek-faq: #8f233a4d;
+  --color-dela-kolor-tekstu-kafelek-faq: #f5e6d3;
+  --color-dela-kolor-tla-kafelek-plan-dnia: #8f233a4d;
+  --color-dela-kolor-tekstu-kafelek-plan-dnia: #f5e6d3;
+  --color-dela-kolor-tla-kafelek-rsvp: #8f233a4d;
+
   --color-primary-50: #f3ecfb;
   --color-primary-100: #e7d9f7;
   --color-primary-200: #d0b3eb;
@@ -38,11 +48,9 @@
 }
 
 body {
-  background-color: #430e18;
   color: #f5e6d3;
 }
 .glass-panel {
-  background: rgba(62, 14, 24, 0.4);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(245, 230, 211, 0.1);
 }

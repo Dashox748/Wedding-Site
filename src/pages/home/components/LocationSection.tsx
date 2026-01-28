@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PointingHandIcon from './PointingHandIcon';
+import Hand from '@/assets/hand.png';
 
 interface LocationBlockProps {
   className?: string;
@@ -11,13 +11,13 @@ interface LocationBlockProps {
 
 const LocationBlock: React.FC<LocationBlockProps> = ({ className, mapQuery, address, title }) => {
   return (
-    <div className={`flex flex-col space-y-8 ${className}`}>
-      {/* Header Info */}
-      <div className="group flex items-start space-x-6">
+    <div className={`flex flex-col space-y-5 ${className}`}>
+      <div className="group flex items-start space-x-5">
         <div className="text-cream-200 w-16 opacity-80 transition-all duration-500 group-hover:translate-x-2 group-hover:opacity-100 lg:w-20">
-          <PointingHandIcon className="w-full" />
+          {/*<PointingHandIcon className="w-full" />*/}
+          <img className="-scale-x-100 w-17" src={Hand} />
         </div>
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-2 mt-3">
           <h3 className="font-display text-cream-100 text-2xl tracking-wider lg:text-3xl">{title}</h3>
           <p className="text-cream-300 border-wine-600/50 inline-block border-t pt-2 font-sans text-sm tracking-widest uppercase lg:text-base">
             {address}
@@ -25,7 +25,6 @@ const LocationBlock: React.FC<LocationBlockProps> = ({ className, mapQuery, addr
         </div>
       </div>
 
-      {/* Map Container */}
       <div className="bg-wine-800 border-wine-600/30 group-hover:border-wine-500/50 relative aspect-video w-full overflow-hidden rounded-sm border shadow-2xl transition-colors lg:aspect-[16/7]">
         <iframe
           className="h-full w-full opacity-80 contrast-[1.1] grayscale-30 filter transition-all duration-700 hover:opacity-100 hover:grayscale-0"
@@ -37,7 +36,6 @@ const LocationBlock: React.FC<LocationBlockProps> = ({ className, mapQuery, addr
           height="100%"
           width="100%"
         />
-        {/* Overlay for inactive state */}
         <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_40px_rgba(45,10,18,0.8)]" />
       </div>
     </div>

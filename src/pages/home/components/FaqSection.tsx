@@ -3,11 +3,11 @@ import React from 'react';
 import kwiatFaq from '@/assets/kwiatFaq.png';
 
 const FAQBox: React.FC<{ children: React.ReactNode; title: string }> = ({ children, title }) => (
-  <div className="border-cream-200/20 bg-wine-800/20 hover:bg-wine-800/40 hover:border-cream-200/40 group w-full border p-8 backdrop-blur-sm transition-all duration-500">
-    <h3 className="font-display text-cream-100 group-hover:text-gold-400 mb-4 text-xl tracking-wider uppercase transition-colors lg:text-2xl">
+  <div className="border-cream-200/20 bg-dela-kolor-tla-kafelek-faq hover:bg-wine-800/40 group w-full border p-8 backdrop-blur-sm transition-all duration-500">
+    <h3 className="font-display text-dela-kolor-tekstu-kafelek-faq mb-4 text-xl tracking-wider uppercase transition-colors lg:text-2xl">
       {title}
     </h3>
-    <p className="text-cream-200/80 font-sans leading-relaxed font-light">{children}</p>
+    <p className="text-dela-kolor-tekstu-kafelek-faq/80 font-sans leading-relaxed font-light">{children}</p>
   </div>
 );
 
@@ -17,7 +17,7 @@ const FAQSection: React.FC = () => {
       <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start lg:gap-20">
         <div className="sticky top-24 flex w-full flex-col items-center space-y-8 text-center lg:w-5/12 lg:items-center">
           <div className="space-y-2">
-            <h2 className="font-display text-cream-100 text-5xl leading-tight lg:text-7xl">
+            <h2 className="font-display text-5xl leading-tight lg:text-7xl">
               <span className="text-wine-400 mb-2 block text-3xl lg:text-4xl">Najczęściej</span>
               Zadawane
               <br />
@@ -29,7 +29,6 @@ const FAQSection: React.FC = () => {
           <div className="animate-pulse-slow relative aspect-square w-full max-w-100 opacity-80">
             <div className="bg-wine-600/10 absolute inset-0 rounded-full blur-3xl" />
             <img src={kwiatFaq} />
-            {/*<RoseBouquet className="text-wine-400 h-full w-full" />*/}
           </div>
         </div>
 
@@ -40,7 +39,7 @@ const FAQSection: React.FC = () => {
 
           <FAQBox title="Strój">
             Nie mamy sztywnych wymagań, więc czujcie się swobodnie! Czarne, czerwone, kolorowe – wszystko mile widziane.
-            <span className="text-cream-300/70 border-wine-600 mt-2 block border-l-2 pl-3 italic">
+            <span className="text-dela-kolor-tekstu-kafelek-faq/70 border-wine-600 mt-2 block border-l-2 pl-3 italic">
               Jedynie biały prosimy zostawić dla Panny Młodej.
             </span>
           </FAQBox>

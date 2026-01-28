@@ -1,4 +1,5 @@
 import LocationSection from '@/pages/home/components/LocationSection.tsx';
+import FoodMenuSection from '@/pages/home/components/FoodMenuSection.tsx';
 import ScrollReveal from '@/components/scrollReveal/ScrollReveal.tsx';
 import InfoSection from '@/pages/home/components/InfoSection.tsx';
 import RSVPSection from '@/pages/home/components/RSVPSection.tsx';
@@ -23,6 +24,9 @@ export const Home = () => {
       </ScrollReveal>
       <ScrollReveal>
         <Plan />
+      </ScrollReveal>
+      <ScrollReveal>
+        <FoodMenuSection />
       </ScrollReveal>
       <ScrollReveal>
         <RSVPSection />

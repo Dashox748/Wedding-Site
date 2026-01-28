@@ -39,7 +39,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
     <div className="mx-2 flex min-w-[70px] flex-col items-center lg:mx-6 lg:min-w-[100px]">
       <div className="relative">
-        <span className="font-display text-cream-100 block text-3xl font-light tabular-nums lg:text-5xl">
+        <span className="text-cream-100 block font-[Cinzel_Decorative] text-3xl font-light tabular-nums lg:text-5xl">
           {value < 10 ? `0${value}` : value}
         </span>
         {/* Subtle glow effect behind numbers */}
@@ -53,7 +53,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
 
   return (
     <div className="flex w-full flex-col items-center space-y-4">
-      <h3 className="text-wine-400 mb-2 text-xs font-semibold tracking-[0.2em] uppercase">Do ślubu pozostało</h3>
+      <h3 className="text-wine-400 mb-2 text-xs font-semibold tracking-[0.2em] uppercase font-[cinzel]">Do ślubu pozostało</h3>
       <div className="border-wine-800 bg-wine-900/40 flex flex-row items-start justify-center rounded-xl border-y px-4 py-6 shadow-2xl backdrop-blur-sm lg:px-12">
         <TimeUnit value={timeLeft.days} label="Dni" />
         <div className="bg-wine-700/50 mx-1 h-12 w-px self-center" />
