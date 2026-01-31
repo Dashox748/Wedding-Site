@@ -3,7 +3,10 @@ import React from 'react';
 import kwiatFaq from '@/assets/kwiatFaq.png';
 
 const FAQBox: React.FC<{ children: React.ReactNode; title: string }> = ({ children, title }) => (
-  <div className="border-cream-200/20 bg-dela-kolor-tla-kafelek-faq hover:bg-wine-800/40 group w-full border p-8 backdrop-blur-sm transition-all duration-500">
+  <div
+    className="border-cream-200/20  hover:bg-wine-800/40 group w-full border p-8 backdrop-blur-sm transition-all duration-500"
+    style={{ boxShadow: '0 0 10px #eaddca82' }}
+  >
     <h3 className="font-display text-dela-kolor-tekstu-kafelek-faq mb-4 text-xl tracking-wider uppercase transition-colors lg:text-2xl">
       {title}
     </h3>
@@ -28,7 +31,14 @@ const FAQSection: React.FC = () => {
 
           <div className="animate-pulse-slow relative aspect-square w-full max-w-100 opacity-80">
             <div className="bg-wine-600/10 absolute inset-0 rounded-full blur-3xl" />
-            <img src={kwiatFaq} />
+            <img
+              style={{
+                filter:
+                  'drop-shadow(0 0 10px rgba(245, 211, 226, 0.35)) drop-shadow(0 0 20px rgba(245, 211, 226, 0.2)) blur(0.3px)',
+                opacity: 0.7,
+              }}
+              src={kwiatFaq}
+            />
           </div>
         </div>
 

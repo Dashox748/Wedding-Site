@@ -10,7 +10,8 @@ interface InfoItemProps {
 
 const InfoItem: React.FC<InfoItemProps> = ({ children, title, delay }) => (
   <div
-    className={`glass-panel bg-dela-kolor-tla-kafelek-wazne-informacje text-dela-kolor-tekstu-kafelek-wazne-informacje hover:bg-wine-800/50 group flex flex-col items-center space-y-4 rounded-lg p-8 text-center transition-colors duration-500 ${delay}`}
+    className={`glass-panel  text-dela-kolor-tekstu-kafelek-wazne-informacje hover:bg-wine-800/50 group flex flex-col items-center space-y-4 rounded-lg p-8 text-center transition-colors duration-500 ${delay}`}
+    style={{boxShadow:'0 0 10px #eaddca82'}}
   >
     <div className=" transform transition-transform duration-300 group-hover:-translate-y-1">
       <img className="size-12.5" src={Branch} />
