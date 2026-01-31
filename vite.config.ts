@@ -1,21 +1,22 @@
-import { defineConfig } from 'vite'
-import { tanstackStart } from '@tanstack/react-start/plugin/vite'
-import viteReact from '@vitejs/plugin-react'
-import viteTsConfigPaths from 'vite-tsconfig-paths'
-import tailwindcss from '@tailwindcss/vite'
-import { cloudflare } from '@cloudflare/vite-plugin'
+import { tanstackStart } from '@tanstack/react-start/plugin/vite';
+import { cloudflare } from '@cloudflare/vite-plugin';
+import viteTsConfigPaths from 'vite-tsconfig-paths';
+import viteReact from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'vite';
+import svgr from 'vite-plugin-svgr';
 
 const config = defineConfig({
   plugins: [
     cloudflare({ viteEnvironment: { name: 'ssr' } }),
-    // this is the plugin that enables path aliases
     viteTsConfigPaths({
       projects: ['./tsconfig.json'],
     }),
     tailwindcss(),
     tanstackStart(),
     viteReact(),
+    svgr(),
   ],
-})
+});
 
-export default config
+export default config;
